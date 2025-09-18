@@ -70,7 +70,7 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Author
-Created by Avinash Shankar (97-vinash)
+Created by [97-vinash](https://www.linkedin.com/in/avinash-shankar-643809249/)
 
 ## Backstory
 
@@ -80,4 +80,4 @@ Created by Avinash Shankar (97-vinash)
 - The Problem was i didn't knew how to write a command line tool so i had to use AI for it but, i'll learn it later.
 
 ---
-⭐ If you find this tool useful, please consider giving it a star on GitHub!
+⭐ If you find this tool useful, please consider giving it a star on [GitHub](https://github.com/97-vinash/cidr-info-tool)
