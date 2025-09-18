@@ -16,11 +16,18 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
 
 ### Prerequisites
 
-- Python 3.6 or higher
+1. Python 3.6 or higher
+2. pip (comes with Python)
+3. Git 
 
-### Installation Methods
+### Installation Methods(choose any 1)
 
-1. **From source**:
+1. **Using pip directly from GitHub**:
+    ```bash
+    pip install git+https://github.com/97-vinash/cidr-info-tool.git
+    ```
+
+2. **From source**:
    ```bash
    Clone the repository
    git clone https://github.com/97-vinash/cidr-info-tool.git
@@ -30,19 +37,16 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
    pip install .
    ```
 
-2. **Using pip directly from GitHub**:
-    ```bash
-    pip install git+https://github.com/97-vinash/cidr-info-tool.git
-    ```
 ## Usage
 
 1. **Basic Command**:
     ```bash
     cidr-info <IP_ADDRESS/CIDR>
     ```
+    Compatible with Windows/Mac/Linux
 
 ## Example Output:
-    ```
+
     cidr-info 192.168.1.1/24
 
     CIDR IP Notation Information
@@ -64,10 +68,9 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
     |  Total Usable Host IPs         |   254
     |  Total Usable Host IP Range    |    192.168.1.1 -> 192.168.1.254
     |--------------------------------|-----------------------------------------|
-    ```
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
 Created by [97-vinash](https://www.linkedin.com/in/avinash-shankar-643809249/)
