@@ -2,13 +2,6 @@
 
 It's a command-line tool to get detailed information about IP addresses in CIDR notation.
 
-## Background
-
-- This is my first ever CLI tool, so i was Learning about Networking and Subnetting Concepts in College, so i thought why not create a CIDR info generator since we had to do it manually to solve it everytime and didn't even know if it was correct or not so i gave it a try.  
-- I wrote everything in python, even though i don't use python, generally i use C and C++.  
-- The Python code i didn't do any improvement, i just wanted it to work. so i just wrote python code for it, it took some hours.  
-- The Problem was i didn't knew how to write a command line tool so i had to use AI for it but, i'll learn it later.
-
 ## Features
 
 - Subnet mask calculation (decimal and binary)
@@ -49,10 +42,12 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
     ```
 
 ## Example Output:
-    ```bash
-    $ cidr-info 192.168.1.1/24
+    ```
+    cidr-info 192.168.1.1/24
+
     CIDR IP Notation Information
     Input: 192.168.1.1/24
+
     |--------------------------------|-----------------------------------------|
     |  Subnet (Decimal)              |    255.255.255.0
     |  Subnet (Binary)               |    11111111.11111111.11111111.00000000
@@ -70,11 +65,19 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
     |  Total Usable Host IP Range    |    192.168.1.1 -> 192.168.1.254
     |--------------------------------|-----------------------------------------|
     ```
+
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Author
 Created by Avinash Shankar (97-vinash)
 
+## Backstory
 
+- This is my first ever CLI tool, so i was Learning about Networking and Subnetting Concepts in College, so i thought why not create a CIDR info generator since we had to do it manually to solve it everytime and didn't even know if it was correct or not so i gave it a try.  
+- I wrote everything in python, even though i don't use python, generally i use C and C++.  
+- The Python code i didn't do any improvement, i just wanted it to work. so i just wrote python code for it, it took some hours.  
+- The Problem was i didn't knew how to write a command line tool so i had to use AI for it but, i'll learn it later.
+
+---
 ⭐ If you find this tool useful, please consider giving it a star on GitHub!
