@@ -113,8 +113,17 @@ def main():
         ones_count = wildcard_bits_joined.count("1")
         total_ip = pow(2, ones_count)
         
-        print("\nCIDR IP Notation Information")
-        print("Input:", input_ip_string)
+        cidr_info_ascii = r"""
+                  _     _           _        __       
+              ___(_) __| |_ __     (_)_ __  / _| ___  
+             / __| |/ _` | '__|____| | '_ \| |_ / _ \ 
+            | (__| | (_| | | |_____| | | | |  _| (_) |
+             \___|_|\__,_|_|       |_|_| |_|_|  \___/                        
+
+        """
+
+        print(cidr_info_ascii)
+        print("Your Input:", input_ip_string)
         print()
         
         print_border()
