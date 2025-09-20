@@ -91,7 +91,7 @@ def get_broadcast_address(ip_binary, network_prefix):
     return binary_broadcast_address, decimal_broadcast_address
 
 def print_border():
-    print("|--------------------------------|-----------------------------------------|")
+    print("|--------------------------------|---------------------------------------|")
 
 def main():
     parser = argparse.ArgumentParser(description='CIDR IP Notation Information Tool')
@@ -118,42 +118,40 @@ def main():
         print()
         
         print_border()
-        print("|  Subnet (Decimal)              |    ", end="")
-        print(".".join(map(str, subnet_decimal)))
-        print("|  Subnet (Binary)               |    ", end="")
-        print(".".join(binary_subnet))
+        print("|  Subnet (Decimal)              |  ", end="")
+        print(f"{'.'.join(map(str, subnet_decimal)):<37}|")
+        print("|  Subnet (Binary)               |  ", end="")
+        print(f"{'.'.join(map(str, binary_subnet)):<37}|")
         print_border()
         
-        print("|  Network Address (Decimal)     |    ", end="")
-        print(".".join(map(str, decimal_network_address)))
-        print("|  Network Address (Binary)      |    ", end="")
-        print(".".join(binary_network_address))
+        print("|  Network Address (Decimal)     |  ", end="")
+        print(f"{'.'.join(map(str, decimal_network_address)):<37}|")
+        print("|  Network Address (Binary)      |  ", end="")
+        print(f"{'.'.join(map(str, binary_network_address)):<37}|")
         print_border()
         
-        print("|  Broadcast Address (Decimal)   |    ", end="")
-        print(".".join(map(str, decimal_broadcast_address)))
-        print("|  Broadcast Address (Binary)    |    ", end="")
-        print(".".join(binary_broadcast_address))
+        print("|  Broadcast Address (Decimal)   |  ", end="")
+        print(f"{'.'.join(map(str, decimal_broadcast_address)):<37}|")
+        print("|  Broadcast Address (Binary)    |  ", end="")
+        print(f"{'.'.join(map(str, binary_broadcast_address)):<37}|")
         print_border()
         
-        print("|  Total Number of IPs           |   ", total_ip)
-        print("|  Total IP Range                |    ", end="")
-        print(".".join(map(str, decimal_network_address)), end="")
-        print(" -> ", end="")
-        print(".".join(map(str, decimal_broadcast_address)))
+        print("|  Total Number of IPs           | ", f"{total_ip:<37}|")
+        print("|  Total IP Range                |  ", end="")
+        full_str = ".".join(map(str, decimal_network_address)) + " -> " + ".".join(map(str, decimal_broadcast_address))
+        print(f"{full_str:<37}|")
         print_border()
         
         if input_ip_decimal[4] >= 31:
-            print("|  Total Usable Host IPs         |    0")
-            print("|  Total Usable Host IP Range    |    N/A")
+            print("|  Total Usable Host IPs         | ", f"{"0":<37}|")
+            print("|  Total Usable Host IP Range    |  "f"{"N/A":<37}|")
         else:
-            print("|  Total Usable Host IPs         |   ", (total_ip-2))
-            print("|  Total Usable Host IP Range    |    ", end="")
+            print("|  Total Usable Host IPs         | ", f"{(total_ip-2):<37}|")
+            print("|  Total Usable Host IP Range    |  ", end="")
             decimal_network_address[3] += 1
             decimal_broadcast_address[3] -= 1
-            print(".".join(map(str, decimal_network_address)), end="")
-            print(" -> ", end="")
-            print(".".join(map(str, decimal_broadcast_address)))
+            full_str2 = ".".join(map(str, decimal_network_address)) + " -> " + ".".join(map(str, decimal_broadcast_address))
+            print(f"{full_str2:<37}|")
         
         print_border()
         print()

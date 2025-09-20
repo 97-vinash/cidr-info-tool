@@ -28,14 +28,15 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
     ```
 
 2. **From source**:
-   ```bash
-   Clone the repository
-   git clone https://github.com/97-vinash/cidr-info-tool.git
-   cd cidr-info-tool
-   
-   Install the package
-   pip install .
-   ```
+    Clone the repository
+    ```bash
+    git clone https://github.com/97-vinash/cidr-info-tool.git
+    cd cidr-info-tool
+    ```
+    Install the package
+    ```bash
+    pip install .
+    ```
 
 ## Usage
 
@@ -47,27 +48,25 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
 
 ## Example Output:
 
-    cidr-info 192.168.1.1/24
-
     CIDR IP Notation Information
-    Input: 192.168.1.1/24
+    Input: 192.168.97.21/13
 
-    |--------------------------------|-----------------------------------------|
-    |  Subnet (Decimal)              |    255.255.255.0
-    |  Subnet (Binary)               |    11111111.11111111.11111111.00000000
-    |--------------------------------|-----------------------------------------|
-    |  Network Address (Decimal)     |    192.168.1.0
-    |  Network Address (Binary)      |    11000000.10101000.00000001.00000000
-    |--------------------------------|-----------------------------------------|
-    |  Broadcast Address (Decimal)   |    192.168.1.255
-    |  Broadcast Address (Binary)    |    11000000.10101000.00000001.11111111
-    |--------------------------------|-----------------------------------------|
-    |  Total Number of IPs           |   256
-    |  Total IP Range                |    192.168.1.0 -> 192.168.1.255
-    |--------------------------------|-----------------------------------------|
-    |  Total Usable Host IPs         |   254
-    |  Total Usable Host IP Range    |    192.168.1.1 -> 192.168.1.254
-    |--------------------------------|-----------------------------------------|
+    |--------------------------------|---------------------------------------|
+    |  Subnet (Decimal)              |  255.248.0.0                          |
+    |  Subnet (Binary)               |  11111111.11111000.00000000.00000000  |
+    |--------------------------------|---------------------------------------|
+    |  Network Address (Decimal)     |  192.168.0.0                          |
+    |  Network Address (Binary)      |  11000000.10101000.00000000.00000000  |
+    |--------------------------------|---------------------------------------|
+    |  Broadcast Address (Decimal)   |  192.175.255.255                      |
+    |  Broadcast Address (Binary)    |  11000000.10101111.11111111.11111111  |
+    |--------------------------------|---------------------------------------|
+    |  Total Number of IPs           |  524288                               |
+    |  Total IP Range                |  192.168.0.0 -> 192.175.255.255       |
+    |--------------------------------|---------------------------------------|
+    |  Total Usable Host IPs         |  524286                               |
+    |  Total Usable Host IP Range    |  192.168.0.1 -> 192.175.255.254       |
+    |--------------------------------|---------------------------------------|
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
