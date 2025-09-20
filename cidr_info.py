@@ -113,56 +113,49 @@ def main():
         ones_count = wildcard_bits_joined.count("1")
         total_ip = pow(2, ones_count)
         
-        cidr_info_ascii = r"""
-                  _     _           _        __       
-              ___(_) __| |_ __     (_)_ __  / _| ___  
-             / __| |/ _` | '__|____| | '_ \| |_ / _ \ 
-            | (__| | (_| | | |_____| | | | |  _| (_) |
-             \___|_|\__,_|_|       |_|_| |_|_|  \___/                        
-
-        """
+        print("|------------------------------------------------------------------------|")
+        ## NOTE_FOR_ME: DON'T CHANGE HOW THE ASCII LOOKS - IT'S WRITTEN THAT WAY INTENTIONALLY
+        cidr_info_ascii = r"""|        _     _           _        __                                   |
+|    ___(_) __| |_ __     (_)_ __  / _| ___                              |
+|   / __| |/ _` | '__|____| | '_ \| |_ / _ \                             |
+|  | (__| | (_| | | |_____| | | | |  _| (_) |   ~developed by 97-vinash  |
+|   \___|_|\__,_|_|       |_|_| |_|_|  \___/                             |
+|                                                                        |"""
 
         print(cidr_info_ascii)
-        print("Your Input:", input_ip_string)
-        print()
-        
         print_border()
-        print("|  Subnet (Decimal)              |  ", end="")
-        print(f"{'.'.join(map(str, subnet_decimal)):<37}|")
-        print("|  Subnet (Binary)               |  ", end="")
-        print(f"{'.'.join(map(str, binary_subnet)):<37}|")
+
+        print(f"|  Your Input                    |  {input_ip_string:<37}|")
         print_border()
-        
-        print("|  Network Address (Decimal)     |  ", end="")
-        print(f"{'.'.join(map(str, decimal_network_address)):<37}|")
-        print("|  Network Address (Binary)      |  ", end="")
-        print(f"{'.'.join(map(str, binary_network_address)):<37}|")
+
+        print(f"|  Subnet (Decimal)              |  {'.'.join(map(str, subnet_decimal)):<37}|")
+        print(f"|  Subnet (Binary)               |  {'.'.join(map(str, binary_subnet)):<37}|")
         print_border()
         
-        print("|  Broadcast Address (Decimal)   |  ", end="")
-        print(f"{'.'.join(map(str, decimal_broadcast_address)):<37}|")
-        print("|  Broadcast Address (Binary)    |  ", end="")
-        print(f"{'.'.join(map(str, binary_broadcast_address)):<37}|")
+        print(f"|  Network Address (Decimal)     |  {'.'.join(map(str, decimal_network_address)):<37}|")
+        print(f"|  Network Address (Binary)      |  {'.'.join(map(str, binary_network_address)):<37}|")
         print_border()
         
-        print("|  Total Number of IPs           | ", f"{total_ip:<37}|")
-        print("|  Total IP Range                |  ", end="")
+        print(f"|  Broadcast Address (Decimal)   |  {'.'.join(map(str, decimal_broadcast_address)):<37}|")
+        print(f"|  Broadcast Address (Binary)    |  {'.'.join(map(str, binary_broadcast_address)):<37}|")
+        print_border()
+        
+        print(f"|  Total Number of IPs           |  {total_ip:<37}|")
         full_str = ".".join(map(str, decimal_network_address)) + " -> " + ".".join(map(str, decimal_broadcast_address))
-        print(f"{full_str:<37}|")
+        print(f"|  Total IP Range                |  {full_str:<37}|")
         print_border()
         
         if input_ip_decimal[4] >= 31:
-            print("|  Total Usable Host IPs         | ", f"{"0":<37}|")
-            print("|  Total Usable Host IP Range    |  "f"{"N/A":<37}|")
+            print(f"|  Total Usable Host IPs         |  {"0":<37}|")
+            print(f"|  Total Usable Host IP Range    |  {"N/A":<37}|")
         else:
-            print("|  Total Usable Host IPs         | ", f"{(total_ip-2):<37}|")
-            print("|  Total Usable Host IP Range    |  ", end="")
+            print(f"|  Total Usable Host IPs         |  {(total_ip-2):<37}|")
             decimal_network_address[3] += 1
             decimal_broadcast_address[3] -= 1
             full_str2 = ".".join(map(str, decimal_network_address)) + " -> " + ".".join(map(str, decimal_broadcast_address))
-            print(f"{full_str2:<37}|")
-        
+            print(f"|  Total Usable Host IP Range    |  {full_str2:<37}|")
         print_border()
+        
         print()
         
     except ValueError as e:

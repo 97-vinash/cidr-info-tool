@@ -20,7 +20,7 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
 2. pip (comes with Python)
 3. Git 
 
-### Installation Methods(choose any 1)
+### Installation Methods (Choose any 1)
 
 1. **Using pip directly from GitHub**:
     ```bash
@@ -48,9 +48,15 @@ It's a command-line tool to get detailed information about IP addresses in CIDR 
 
 ## Example Output:
 
-    CIDR IP Notation Information
-    Input: 192.168.97.21/13
-
+    |------------------------------------------------------------------------|
+    |        _     _           _        __                                   |
+    |    ___(_) __| |_ __     (_)_ __  / _| ___                              |
+    |   / __| |/ _` | '__|____| | '_ \| |_ / _ \                             |
+    |  | (__| | (_| | | |_____| | | | |  _| (_) |   ~developed by 97-vinash  |
+    |   \___|_|\__,_|_|       |_|_| |_|_|  \___/                             |
+    |                                                                        |
+    |--------------------------------|---------------------------------------|
+    |  Your Input                    |  192.168.97.21/13                     |
     |--------------------------------|---------------------------------------|
     |  Subnet (Decimal)              |  255.248.0.0                          |
     |  Subnet (Binary)               |  11111111.11111000.00000000.00000000  |
